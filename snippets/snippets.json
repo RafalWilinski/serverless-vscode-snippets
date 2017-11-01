@@ -1,0 +1,120 @@
+{
+  "Serverless Core Project": {
+    "prefix": "slscore",
+    "body": [
+      "service: ${1:my-sls-project}",
+      "",
+      "provider:",
+      "  name: ${2|aws,azure,google,kubeless,spotinst,webtasks,openwhisk|}",
+      "  runtime: ${3|nodejs6.10,python2.7,python3.6,java,swift,php|}",
+      "  memory: ${4|128,256,512,1024|}",
+      "",
+      "functions:",
+      "  $5"
+    ],
+    "description": "Serverless Core Project"
+  },
+  "Serverless Generic Function": {
+    "prefix": "slsfun",
+    "body": [
+      "${1:handler}:",
+      "  handler: ${2:handler.handle}",
+      "  name: ${1:handler}",
+      "  description: ${3:Example function}",
+      "  memorySize: ${4|128,256,512,1024|}",
+      "  runtime: ${5|nodejs6.10,python3.6,python2.7|}",
+      "  timeout: ${6:10}",
+      "  environment:",
+      "    - ${7:FOO: BAR}",
+      "  events:",
+      "    $8"
+    ],
+    "description": "Serverless Generic Function"
+  },
+  "IAM Role Statements": {
+    "prefix": "iam",
+    "body": [
+      "iamRoleStatements:",
+      "  - Effect: 'Allow'",
+      "    Action:",
+      "      - $1",
+      "    Resource:",
+      "      $2"
+    ],
+    "description": "IAM Role Statements"
+  },
+  "Fn::Join": {
+    "prefix": "fnjoin",
+    "body": ["Fn::Join:", "  - '$1'", "  - - '$2'", "    - $3"],
+    "description": "Fn::Join"
+  },
+  "VPC Settings": {
+    "prefix": "vpc",
+    "body": [
+      "vpc:",
+      "  securityGroupIds:",
+      "    - $1",
+      "  subnetIds:",
+      "    - $2"
+    ],
+    "description": "VPC Settings"
+  },
+  "Packaging Settings": {
+    "prefix": "pkg",
+    "body": [
+      "package:",
+      "  include:",
+      "    - $1",
+      "  exclude:",
+      "    - ${1:.git/**}",
+      "  excludeDevDependencies: ${3|true,false|}"
+    ],
+    "description": "Packaging Settings"
+  },
+  "Resources": {
+    "prefix": "rcs",
+    "body": [
+      "resources:",
+      "  Resources:",
+      "    $1",
+      "  Outputs:",
+      "    $2",
+      ""
+    ],
+    "description": "Resources"
+  },
+  "Event HTTP": {
+    "prefix": "ehttp",
+    "body": [
+      "- http:",
+      "    path: ${1:users/create}",
+      "    method: ${2|get,post|}",
+      "    cors: ${3|true,false|}",
+      "    private: ${4|true,false|}"
+    ],
+    "description": "Event HTTP"
+  },
+  "Event S3": {
+    "prefix": "es3",
+    "body": [
+      "- s3:",
+      "    bucket: ${1:photos}",
+      "    event: ${2:s3:ObjectCreated:*}",
+      "    rules:",
+      "      - prefix: ${3:uploads/}",
+      "      - suffix: ${4:.jpg}"
+    ],
+    "description": "Event S3"
+  },
+  "Scheduled Event": {
+    "prefix": "cron",
+    "body": [
+      "- schedule:",
+      "    rate: rate(${1:10} ${2|seconds,minutes,hours,days|})",
+      "    enabled: ${3|true,false|}",
+      "    input:",
+      "      $4: $5"
+    ],
+    "description": "Scheduled Event"
+  }
+}

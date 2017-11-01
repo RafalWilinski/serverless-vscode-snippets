@@ -1,0 +1,19 @@
+{
+  "name": "serverless-vscode-snippets",
+  "version": "0.0.1",
+  "description": "Code snippets for Serverless Framework in VS Code editor",
+  "main": "index.js",
+  "publisher": "rwilinski",
+  "displayName": "Serverless Snippets",
+  "categories": ["Snippets"],
+  "author": "Rafal Wilinski <rwilinski.me>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "yaml",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}
