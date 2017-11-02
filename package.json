@@ -5,6 +5,9 @@
   "main": "index.js",
   "publisher": "rwilinski",
   "displayName": "Serverless Snippets",
+  "engines": {
+    "vscode": "^0.10.0"
+  },
   "categories": ["Snippets"],
   "author": "Rafal Wilinski <rwilinski.me>",
   "license": "SEE LICENSE IN LICENSE.md",
