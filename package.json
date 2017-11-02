@@ -1,10 +1,15 @@
 {
   "name": "serverless-vscode-snippets",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Code snippets for Serverless Framework in VS Code editor",
   "main": "index.js",
-  "publisher": "rwilinski",
-  "displayName": "Serverless Snippets",
+  "publisher": "rafwilinski",
+  "icon": "images/serverless-framework.png",
+  "displayName": "Serverless Framework Snippets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RafalWilinski/serverless-vscode-snippets"
+  },
   "engines": {
     "vscode": "^0.10.0"
   },
