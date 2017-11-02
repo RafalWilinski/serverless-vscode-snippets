@@ -4,7 +4,7 @@
 [![Installs](https://vsmarketplacebadge.apphb.com/installs/rafwilinski.serverless-vscode-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=rafwilinski.serverless-vscode-snippets)
 [![Ratings](https://vsmarketplacebadge.apphb.com/rating/rafwilinski.serverless-vscode-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=rafwilinski.serverless-vscode-snippets)
 
-This extension contains code snippets for YAML syntax for [Vs Code][code] editor.
+This extension contains code snippets for YAML syntax for Vs Code editor.
 
 ![Demo](images/demo.gif "Demo")
 

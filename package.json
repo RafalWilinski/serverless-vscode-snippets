@@ -1,6 +1,6 @@
 {
   "name": "serverless-vscode-snippets",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Code snippets for Serverless Framework in VS Code editor",
   "main": "index.js",
   "publisher": "rafwilinski",
