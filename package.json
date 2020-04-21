@@ -1,6 +1,6 @@
 {
   "name": "serverless-vscode-snippets",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Code snippets for Serverless Framework in VS Code editor",
   "main": "index.js",
   "publisher": "rafwilinski",
@@ -14,7 +14,7 @@
     "vscode": "^0.10.0"
   },
   "categories": ["Snippets"],
-  "author": "Rafal Wilinski <rwilinski.me>",
+  "author": "Rafal Wilinski <rafal@dynobase.dev> (https://rwilinski.me)",
   "license": "SEE LICENSE IN LICENSE.md",
   "contributes": {
     "snippets": [
