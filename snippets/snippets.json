@@ -21,8 +21,8 @@
       "  handler: ${2:handler.handle}",
       "  name: ${1:handler}",
       "  description: ${3:Example function}",
-      "  memorySize: ${4|128,256,512,1024|}",
-      "  runtime: ${5|nodejs6.10,python3.6,python2.7|}",
+      "  memorySize: ${4|128,256,512,1024,2048|}",
+      "  runtime: ${5|nodejs10.x,nodejs12.x,python2.6,python2.7,python3.6,python3.7,ruby2.5,ruby2.7,java8,java11,go1.x|}",
       "  timeout: ${6:10}",
       "  environment:",
       "    - ${7:FOO: BAR}",
@@ -45,7 +45,12 @@
   },
   "Fn::Join": {
     "prefix": "fnjoin",
-    "body": ["Fn::Join:", "  - '$1'", "  - - '$2'", "    - $3"],
+    "body": [
+      "Fn::Join:",
+      "  - '$1'",
+      "  - - '$2'",
+      "    - $3"
+    ],
     "description": "Fn::Join"
   },
   "VPC Settings": {
